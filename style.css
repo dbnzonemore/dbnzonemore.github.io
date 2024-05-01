@@ -57,7 +57,7 @@ a {
 
 .background {
   width: 480px;
-  height: 120%;
+  height: 100vh;
   background-size: cover;
   background-image: url("assets/images/back.png");
   position: absolute;
