@@ -56,11 +56,13 @@ a {
 }
 
 .background {
-  width: 480px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-image: url("assets/images/back.png");
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
