@@ -52,7 +52,7 @@ body {
   color: #ffffff;
   text-stroke: 2px rgba(238, 169, 57);
   font-weight: 900;
-  padding: 10vh 5vw; /* изменено */
+  padding: 20vh 0;
   text-align: center;
 }
 
@@ -92,17 +92,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5vh; /* изменено */
-  margin-top: 5vh; /* изменено */
+  gap: 25px;
+  margin-top: 10vh;
 }
 
 .get-signal {
-  font-size: 3vh; /* изменено */
+  font-size: 32px;
+  font-weight: 900;
   text-align: center;
   border: none;
   color: #ffc400;
-  width: 70vw;
-  max-width: 286px;
+  width: 286px;
+  height: 66px;
   background-color: #003e85;
   cursor: pointer;
   box-shadow: 0px 0px 20px #003e85;
@@ -128,10 +129,11 @@ body {
 }
 
 .game-here {
-  font-size: 2.5vh; /* изменено */
+  font-size: 16px;
+  font-weight: 900;
   text-align: center;
-  width: 40vw;
-  max-width: 136px;
+  width: 136px;
+  height: 41px;
   background-color: #003e85;
   border: 1px solid #FFFFFF;
   box-shadow: 0px 0px 20px #003e85;
@@ -150,11 +152,25 @@ body {
 /* Медиа-запросы для мобильных устройств */
 @media screen and (max-width: 480px) {
   .text-top {
-    padding: 5vh 3vw; /* изменено */
+    padding: 10vh 5vw; /* изменено */
   }
 
   .game-button {
-    gap: 3vh; /* изменено */
-    margin-top: 3vh; /* изменено */
+    margin-top: 5vh;
+  }
+
+  .get-signal {
+    width: 70vw;
+    max-width: 286px;
+    height: auto; /* изменено */
+    padding: 5px 20px; /* изменено */
+    font-size: 20px; /* изменено */
+  }
+
+  .game-here {
+    width: 50vw; /* изменено */
+    max-width: 136px;
+    height: auto; /* изменено */
+    font-size: 14px; /* изменено */
   }
 }
