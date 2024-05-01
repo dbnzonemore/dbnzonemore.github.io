@@ -59,7 +59,7 @@ a {
   width: 480px;
   height: 120%;
   background-size: cover;
-  background-image: url("assets/images/back.gif");
+  background-image: url("assets/images/back.mp4");
   position: absolute;
   z-index: -1;
 }
