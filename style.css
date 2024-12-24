@@ -8,199 +8,77 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   height: 100vh;
-
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-
   background-color: #07103D;
   overflow: hidden;
 }
 
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.decor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
-.background {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url("assets/images/back.png");
-  position: absolute;
-  z-index: -1;
-}
-
 .text-top {
   position: absolute;
-  top: 5%; /* Текст всегда немного ниже верхней границы */
-  left: 50%; /* Центруем по горизонтали */
+  top: 5%;
+  left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  text-align: center;
   color: #ffffff;
-  font-weight: 900;
 }
 
 .text-title {
   font-size: 36px;
-  font-family: 'Dudka', sans-serif;
 }
 
 .text-subtitle {
   font-size: 25px;
-  font-family: 'Dudka', sans-serif;
 }
 
-.screen-active {
-  display: none;
+.game-screen {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex-grow: 1;
 }
 
-.img-signal {
-  width: 100%;
-  max-width: 200px; /* Уменьшили размер изображения */
+.screenStart, .loading, .img-signal {
+  display: none;
+  max-width: 150px;
   height: auto;
-  margin: auto;
-  border-radius: 10px;
-  transition: 0.1s;
+}
+
+.screenStart.active {
+  display: block;
+}
+
+.loading.active {
+  display: block;
+}
+
+.img-signal.active {
+  display: block;
 }
 
 .game-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 25px;
-  margin: 20px 0; /* Отступ сверху и снизу */
+  gap: 20px;
+  margin: 20px 0;
 }
 
 .get-signal {
-  font-size: 32px;
-  font-weight: 900;
-  text-align: center;
-  border: none;
-  color: #ffc400;
-  width: 286px;
-  height: 66px;
+  font-size: 20px;
+  padding: 10px 20px;
   background-color: #003e85;
+  color: #ffc400;
+  border: none;
   cursor: pointer;
-  box-shadow: 0px 0px 20px #003e85;
-  border-radius: 8px;
-  animation: pulse 2s infinite;
-}
-
-.get-signal:active + .screen-active {
-  display: flex; /* Показываем изображение после нажатия */
+  border-radius: 5px;
 }
 
 .game-here {
   font-size: 16px;
-  font-weight: 900;
-  text-align: center;
-  padding-top: 12px;
-  width: 136px;
-  height: 41px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
   background-color: #003e85;
-  box-shadow: 0px 0px 20px #003e85;
-  border-radius: 8px;
-}
-
-/* --- Медиазапросы для адаптации --- */
-
-/* Планшеты (768px - 1024px) */
-@media screen and (max-width: 1024px) {
-  .text-title {
-    font-size: 32px;
-  }
-
-  .text-subtitle {
-    font-size: 22px;
-  }
-
-  .get-signal {
-    width: 260px;
-    height: 60px;
-    font-size: 28px;
-  }
-
-  .game-here {
-    width: 120px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .img-signal {
-    max-width: 180px;
-  }
-}
-
-/* Мобильные устройства (480px - 768px) */
-@media screen and (max-width: 768px) {
-  .text-title {
-    font-size: 28px;
-  }
-
-  .text-subtitle {
-    font-size: 20px;
-  }
-
-  .get-signal {
-    width: 240px;
-    height: 56px;
-    font-size: 24px;
-  }
-
-  .game-here {
-    width: 110px;
-    height: 36px;
-    font-size: 12px;
-  }
-
-  .img-signal {
-    max-width: 150px;
-  }
-}
-
-/* Маленькие устройства (до 480px) */
-@media screen and (max-width: 480px) {
-  .text-title {
-    font-size: 24px;
-  }
-
-  .text-subtitle {
-    font-size: 18px;
-  }
-
-  .get-signal {
-    width: 220px;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .game-here {
-    width: 100px;
-    height: 32px;
-    font-size: 10px;
-  }
-
-  .img-signal {
-    max-width: 130px;
-  }
+  border-radius: 5px;
 }
