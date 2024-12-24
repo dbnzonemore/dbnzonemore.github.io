@@ -1,19 +1,25 @@
-let buttonGetSignal = document.getElementById("get-signal");
-let loadingSignal = document.getElementById("loading");
-let screenStart = document.getElementById("screenStart");
-let signal = document.getElementById("img-signal");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttonGetSignal = document.getElementById("get-signal");
+  const screenStart = document.getElementById("screenStart");
+  const loadingSignal = document.getElementById("loading");
+  const signal = document.getElementById("img-signal");
 
-buttonGetSignal.onclick = function() {
-    signal.classList.add("deactive");
-    screenStart.classList.add("deactive");
-    loadingSignal.classList.remove("deactive");
-    buttonGetSignal.disabled = true;
-    const randomPhotoNumber = Math.floor(Math.random() * (80 - 1) + 1);
-    signal.src = `assets/images/signal/${randomPhotoNumber}.jpg`;
+  // Initial state
+  screenStart.classList.add("active");
 
-  setTimeout(function(){
-    loadingSignal.classList.add("deactive");
-    signal.classList.remove("deactive");
-    buttonGetSignal.disabled = false;
-}, 3000);
-}
+  buttonGetSignal.addEventListener("click", () => {
+    // Show loading and hide others
+    screenStart.classList.remove("active");
+    loadingSignal.classList.add("active");
+    signal.classList.remove("active");
+
+    // Simulate loading
+    setTimeout(() => {
+      loadingSignal.classList.remove("active");
+      signal.classList.add("active");
+      // Set a random image
+      const randomPhotoNumber = Math.floor(Math.random() * 80) + 1;
+      signal.src = `assets/images/signal/${randomPhotoNumber}.jpg`;
+    }, 3000);
+  });
+});
