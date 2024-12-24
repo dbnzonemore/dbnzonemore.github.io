@@ -6,8 +6,8 @@
 
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 
   height: 100vh;
 
@@ -45,7 +45,7 @@ a {
 
 .text-top {
   position: absolute;
-  top: 2%; /* Текст всегда немного ниже верхней границы */
+  top: 5%; /* Текст всегда немного ниже верхней границы */
   left: 50%; /* Центруем по горизонтали */
   transform: translateX(-50%);
   display: flex;
@@ -70,13 +70,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .img-signal {
   width: 100%;
   max-width: 272px;
   height: auto;
-  margin-top: 10px;
+  margin: auto;
   border-radius: 10px;
   transition: 0.1s;
 }
@@ -85,9 +86,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 25px;
-  margin-top: 75px;
+  margin-bottom: 20px;
 }
 
 .get-signal {
