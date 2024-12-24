@@ -95,6 +95,7 @@ a {
 }
 
 .screenStart {
+  opacity: 0.9;
   position: fixed;
 }
 
