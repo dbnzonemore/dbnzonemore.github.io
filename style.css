@@ -45,7 +45,7 @@ a {
 
 .text-top {
   position: absolute;
-  top: 20px; /* Прижимаем текст к верхней части */
+  top: 2%; /* Текст всегда немного ниже верхней границы */
   left: 50%; /* Центруем по горизонтали */
   transform: translateX(-50%);
   display: flex;
