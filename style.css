@@ -17,13 +17,13 @@ body {
   font-variation-settings: "slnt" 0;
 
   background-color: #07103D;
+  overflow: hidden; /* Предотвращает скроллинг на маленьких экранах */
 }
 
 a {
   color: #ffffff;
   text-decoration: none;
 }
-
 
 .decor {
   display: flex;
@@ -32,7 +32,6 @@ a {
   justify-content: center;
   position: absolute;
 }
-
 
 @keyframes tilt-shaking {
   0% { transform: rotate(0deg); }
@@ -56,14 +55,14 @@ a {
 }
 
 .background {
-  width: 480px;
-  height: 120%;
-  background-size: cover;
+  width: 100vw; /* Ширина равна ширине устройства */
+  height: 100vh; /* Высота равна высоте устройства */
+  background-size: cover; /* Растягивает изображение на весь экран, сохраняя пропорции */
+  background-position: center; /* Центрирует изображение */
   background-image: url("assets/images/back.png");
   position: absolute;
   z-index: -1;
 }
-
 
 .text-top {
   display: flex;
@@ -94,13 +93,11 @@ a {
   font-family: 'Dudka', sans-serif;
 }
 
-
 .screen-active {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .active {
   opacity: 1;
@@ -124,8 +121,9 @@ a {
 }
 
 .img-signal {
-  width: 272px;
-  height: 272px;
+  width: 100%; /* Изображение адаптируется по ширине контейнера */
+  max-width: 272px; /* Максимальная ширина */
+  height: auto; /* Сохраняет пропорции */
   margin-top: 10px;
   border-radius: 10px;
   transition: 0.1s;
@@ -195,4 +193,31 @@ a {
 
 .game-here:active {
   transform: scale(95%);
+}
+
+/* Адаптация под мобильные устройства */
+@media screen and (max-width: 768px) {
+  .text-title {
+    font-size: 28px;
+  }
+  
+  .text-subtitle {
+    font-size: 20px;
+  }
+  
+  .get-signal {
+    width: 240px;
+    height: 56px;
+    font-size: 24px;
+  }
+  
+  .game-here {
+    width: 120px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .img-signal {
+    max-width: 200px;
+  }
 }
