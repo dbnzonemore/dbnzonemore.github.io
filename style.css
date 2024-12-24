@@ -67,7 +67,7 @@ a {
 }
 
 .screen-active {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -75,7 +75,7 @@ a {
 
 .img-signal {
   width: 100%;
-  max-width: 272px;
+  max-width: 200px; /* Уменьшили размер изображения */
   height: auto;
   margin: auto;
   border-radius: 10px;
@@ -88,7 +88,7 @@ a {
   align-items: center;
   justify-content: flex-end;
   gap: 25px;
-  margin-bottom: 20px;
+  margin: 20px 0; /* Отступ сверху и снизу */
 }
 
 .get-signal {
@@ -104,6 +104,10 @@ a {
   box-shadow: 0px 0px 20px #003e85;
   border-radius: 8px;
   animation: pulse 2s infinite;
+}
+
+.get-signal:active + .screen-active {
+  display: flex; /* Показываем изображение после нажатия */
 }
 
 .game-here {
@@ -143,7 +147,7 @@ a {
   }
 
   .img-signal {
-    max-width: 230px;
+    max-width: 180px;
   }
 }
 
@@ -170,7 +174,7 @@ a {
   }
 
   .img-signal {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
 
@@ -197,6 +201,6 @@ a {
   }
 
   .img-signal {
-    max-width: 180px;
+    max-width: 130px;
   }
 }
